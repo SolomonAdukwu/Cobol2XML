@@ -73,7 +73,15 @@ public class CobolParser {
 		return s;
 	}
 
-
+	protected Parser constantValue(){
+		Sequence s = new Sequence();
+		s.add(new Num());
+		s.add(new Word());
+		s.add(new CaselessLiteral("value"));
+		s.add(new Num());
+		s.setAssembler(new ConstantValueAssembler());
+		return s;
+	}
 
 	/*
 	 * Return a parser that will recognise the grammar:

@@ -75,7 +75,7 @@ public class Cobol2XML {
 		InputStream is = null;
 		BufferedReader r = null;
 		try {
-			is = new FileInputStream(args[0]);
+			is = new FileInputStream("C:\\Users\\SOLOMON ADUKWU\\Downloads\\Cobol2XML\\cobol.cbl");
 			try {
 				r = new BufferedReader(new InputStreamReader(is));
 
@@ -108,7 +108,7 @@ public class Cobol2XML {
 		  } catch (Exception e) {
 		    e.printStackTrace(); // FileInputStream
 		  } finally {
-			xmlp.writeFile(args[1]);
+			xmlp.writeFile("C:\\Users\\SOLOMON ADUKWU\\Downloads\\Cobol2XML\\cobol2xml.xml");
 			if(is != null) {
 				is.close(); 
 			}		
